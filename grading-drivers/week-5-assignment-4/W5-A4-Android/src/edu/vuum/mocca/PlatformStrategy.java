@@ -45,11 +45,13 @@ public abstract class PlatformStrategy
     /** Barrier that waits for all the game threads to finish. */
     public abstract void awaitDone();
 
-    /** 
+   /**
      * Returns the name of the platform in a string. e.g., Android or
      * a JVM.
+     * @deprecated This method is just here for backwards
+     * compatibility with the skeletons.
      */
-    public abstract String platformName();
+    public String platformName() { return ""; }
 
     /**
      * Error log formats the message and displays it for the debugging
