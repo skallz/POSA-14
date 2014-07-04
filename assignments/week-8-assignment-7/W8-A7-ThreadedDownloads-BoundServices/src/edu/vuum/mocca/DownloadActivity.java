@@ -7,6 +7,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  * This is the main Activity that the program uses to start the
@@ -178,6 +179,9 @@ public class DownloadActivity extends DownloadBase {
             // mDownloadRequest, passing in the appropriate Uri and
             // callback.
             mDownloadRequest.downloadImage(uri, mDownloadCallback);
+            Toast.makeText(this,
+                    "Request sent to the service",
+                    Toast.LENGTH_SHORT).show();
             break;
         }
     }
